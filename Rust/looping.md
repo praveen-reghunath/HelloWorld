@@ -10,9 +10,9 @@ loop { println!("I loop for ever."); }
 
 ```
 loop {
-        println!("I live.");
-        break;
-    }
+    println!("I live.");
+    break;
+}
 ```
 
 ### While loop
@@ -114,4 +114,21 @@ for n in 1..11 {
 
 println!("{}" , sum);
 
+```
+
+#### break and loop values
+
+```
+let (mut a, mut b) = (1, 1);
+
+let result = loop {
+    if b > 10 {
+        break b;
+    }
+    let c = a + b;
+    a = b;
+    b = c;
+};
+
+println!("{}",result);
 ```
